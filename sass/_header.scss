@@ -1,0 +1,42 @@
+@import "variable";
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header-logo {
+  line-height: 1;
+  padding: 20px 0;
+  background: $color-white;
+}
+.logo {
+  width: 145px;
+  a {
+    display: block;
+    img {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.header-nav {
+  color: $color-white;
+  background: $color-black;
+}
+.gl-nav {
+  display: flex;
+  font-size: 14px;
+  li {
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+    a{
+      display: block;
+      padding: 10px 0;
+    }
+  }
+}
+

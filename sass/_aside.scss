@@ -1,0 +1,63 @@
+@import "variable";
+
+aside {
+  width: calc(345 / 1200 * 100%);
+  @include mq('sp') {
+    width: 100%;
+  }
+}
+
+.section-title {
+  font-size: 18px;
+  text-align: center;
+}
+
+// myName
+.myName {
+  h3 {
+    margin-top: 30px;
+  }
+  img {
+    width: 130px;
+    border-radius: 50%;
+    display: block;
+    margin: 90px auto 0;
+    @include mq('sp') {
+      margin-top: 80px;
+    }
+  }
+  p {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+}
+
+// ranking
+.ranking {
+  margin-top: 60px;
+}
+.ranking-item {
+  margin-top: 30px;
+  p {
+    font-size: 14px;
+  }
+}
+
+// archive
+.archive {
+  margin-top: 60px;
+}
+.archive-list {
+  margin-top: 30px;
+  li {
+    border-top: 1px solid $color-border;
+    &:last-child {
+      border-bottom: 1px solid $color-border;
+    }
+    a {
+      display: block;
+      font-size: 14px;
+      padding: 20px;
+    }
+  }
+}

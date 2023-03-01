@@ -1,0 +1,100 @@
+@import "variable";
+
+#footer {
+  background: $color-footer;
+  padding: 50px 0 10px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  @include mq('sp') {
+    flex-direction: column;
+  }
+}
+.footer-item {
+  width: calc(350 / 1200 * 100%);
+  @include mq('sp') {
+    width: 100%;
+  }
+}
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+// about 
+.about {
+  p {
+    font-size: 14px;
+  }
+}
+.about-list {
+  margin-top: 20px;
+  li {
+    margin-top: 5px;
+    position: relative;
+    &:first-child {
+      margin-top: 0;
+    }
+    a {
+      font-size: 14px;
+      display: inline-block;
+      position: relative;
+      padding-left: 12px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 0 6px 8px;
+        border-color: transparent transparent transparent #333;
+      }
+    }
+  }
+}
+
+
+// menu
+.menu {
+  @include mq('sp') {
+    margin-top: 50px;
+  }
+}
+.menu-list {
+  li {
+    border-top: 1px solid $color-border;
+    &:last-child {
+      border-bottom: 1px solid $color-border;
+    }
+    a {
+      display: block;
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+}
+
+// twitter
+.twitter {
+  @include mq('sp') {
+    margin-top: 30px;
+  }
+}
+.twitter-box {
+  width: 100%;
+}
+
+
+// copy 
+.copy {
+  margin-top: 60px;
+  text-align: center;
+  p {
+    font-size: 12px;
+  }
+}
